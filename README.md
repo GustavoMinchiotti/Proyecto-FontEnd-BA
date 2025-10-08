@@ -45,6 +45,10 @@ Sitio web desarrollado como práctica de maquetación y diseño web, con temáti
 
 El sitio está optimizado para pantallas de escritorio de hasta **1980 px** de ancho y preparado para ajustes progresivos en versiones móviles.
 
+- Se usaron media queries progresivas `(max-width)` para adaptar el contenido a distintos tamaños de pantalla.
+- Se priorizó un diseño mobile-first en ajustes visuales, reduciendo anchos, columnas y tamaños de texto.
+- Se mantuvo la simplicidad del CSS y la legibilidad del código, cumpliendo con las pautas académicas.
+
 ---
 
 ## Autor
