@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Proyecto Vintage</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header id="inicio" class="header">
+      <div class="container header-inner">
+        <h1 class="site-title">Vintage 80's</h1>
+        <nav aria-label="Menú principal" class="main-nav">
+          <ul class="nav-list">
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
+            <li><a href="#resenas">Reseñas</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- Hero con background -->
+      <section class="hero">
+        <div class="container">
+          <div class="hero-text">
+            <h2>Bienvenido a Vintage 80's</h2>
+            <p>Calcos con temática pop de la década del 80 y algo de los 90</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Productos: Flexbox -->
+      <section id="productos" class="productos container">
+        <h2 id="productos-title">Productos</h2>
+        <div class="products-grid">
+          <article class="card">
+            <img src="assets/img/producto1.jpg" alt="Producto 1" />
+            <h3>Producto 1</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+
+          <article class="card">
+            <img src="assets/img/producto2.jpg" alt="Producto 2" />
+            <h3>Producto 2</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+
+          <article class="card">
+            <img src="assets/img/producto3.jpg" alt="Producto 3" />
+            <h3>Producto 3</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+        </div>
+      </section>
+
+      <!-- Reseñas: Grid -->
+      <section id="resenas" class="resenas container">
+        <h2 id="resenas-title">Reseñas</h2>
+        <div class="reviews-grid">
+          <blockquote class="review">
+            <p>"Producto excelente; recomendable."</p>
+            <cite>— Ana</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>"Buena atención y entrega rápida."</p>
+            <cite>— Marcos</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>"Calidad por sobre todo."</p>
+            <cite>— Lucía</cite>
+          </blockquote>
+          <blockquote class="review">
+            <p>"Volvería a comprar sin dudar."</p>
+            <cite>— Pedro</cite>
+          </blockquote>
+        </div>
+      </section>
+
+      <!-- Contacto: Formspree -->
+      <section id="contacto" class="contact container">
+        <h2 id="contacto-title">Contacto</h2>
+
+        <form
+          action="https://formspree.io/f/mwprnwnp"
+          method="POST"
+          class="contact-form"
+          novalidate
+        >
+          <label for="name">Nombre</label>
+          <input id="name" name="name" type="text" required />
+
+          <label for="email">Correo electrónico</label>
+          <input id="email" name="_replyto" type="email" required />
+
+          <label for="message">Mensaje</label>
+          <textarea id="message" name="message" rows="6" required></textarea>
+
+          <!-- Opcional: asunto -->
+          <input
+            type="hidden"
+            name="_subject"
+            value="Nuevo mensaje desde sitio"
+          />
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; Vintage 80's. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
