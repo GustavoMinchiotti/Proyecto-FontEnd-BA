@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Proyecto Vintage</title>
+    <title>Productos</title>
 
     <link
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
@@ -18,10 +18,10 @@
         <h1 class="site-title">Vintage 80's</h1>
         <nav aria-label="Menú principal" class="main-nav">
           <ul class="nav-list">
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="/productos.html">Productos</a></li>
+            <li><a href="/index.html">Inicio</a></li>
+            <li><a href="#productos">Productos</a></li>
             <li><a href="/resenas.html">Reseñas</a></li>
-            <li><a href="#contacto">Contacto</a></li>
+            <li><a href="/index.html#contacto">Contacto</a></li>
           </ul>
         </nav>
       </div>
@@ -62,61 +62,37 @@
             <p>Descripción corta.</p>
             <a class="btn" href="#">Ver</a>
           </article>
+
+           <article class="card">
+            <img src="assets/img/toy1.jpg" alt="Producto 3" />
+            <h3>Producto 4</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+
+           <article class="card">
+            <img src="assets/img/toy2.webp" alt="Producto 3" />
+            <h3>Producto 4</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+
+           <article class="card">
+            <img src="assets/img/toy3.jpg" alt="Producto 3" />
+            <h3>Producto 5</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
+
+           <article class="card">
+            <img src="assets/img/toy4.webp" alt="Producto 3" />
+            <h3>Producto 6</h3>
+            <p>Descripción corta.</p>
+            <a class="btn" href="#">Ver</a>
+          </article>
         </div>
       </section>
 
-      <!-- Reseñas: Grid -->
-      <section id="resenas" class="resenas container">
-        <h2 id="resenas-title">Reseñas</h2>
-        <div class="reviews-grid">
-          <blockquote class="review">
-            <p>"Producto excelente; recomendable."</p>
-            <cite>— Ana</cite>
-          </blockquote>
-          <blockquote class="review">
-            <p>"Buena atención y entrega rápida."</p>
-            <cite>— Marcos</cite>
-          </blockquote>
-          <blockquote class="review">
-            <p>"Calidad por sobre todo."</p>
-            <cite>— Lucía</cite>
-          </blockquote>
-          <blockquote class="review">
-            <p>"Volvería a comprar sin dudar."</p>
-            <cite>— Pedro</cite>
-          </blockquote>
-        </div>
-      </section>
-
-      <!-- Contacto: Formspree -->
-      <section id="contacto" class="contact container">
-        <h2 id="contacto-title">Contacto</h2>
-
-        <form
-          action="https://formspree.io/f/mwprnwnp"
-          method="POST"
-          class="contact-form"
-          novalidate
-        >
-          <label for="name">Nombre</label>
-          <input id="name" name="name" type="text" required />
-
-          <label for="email">Correo electrónico</label>
-          <input id="email" name="_replyto" type="email" required />
-
-          <label for="message">Mensaje</label>
-          <textarea id="message" name="message" rows="6" required></textarea>
-
-          <!-- Opcional: asunto -->
-          <input
-            type="hidden"
-            name="_subject"
-            value="Nuevo mensaje desde sitio"
-          />
-
-          <button type="submit" class="btn">Enviar</button>
-        </form>
-      </section>
     </main>
 
     <footer class="footer">
