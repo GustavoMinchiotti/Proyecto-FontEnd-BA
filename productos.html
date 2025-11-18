@@ -3,25 +3,44 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Productos</title>
+    <title>Productos — Proyecto Vintage</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&family=Audiowide&family=Orbitron:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/retro-themes.css" />
   </head>
-  <body>
+ 
+  <!-- IMPORTANTE: agrego class="theme-arcade" como tema inicial -->
+  <body class="theme-arcade">
     <header id="inicio" class="header">
       <div class="container header-inner">
+        <!-- Logotipo -->
+        <div class="logotipo">
+          <img src="assets/img/logotipo.png" alt="V80's" />
+        </div>
+
+        <!-- Título -->
         <h1 class="site-title">Vintage 80's</h1>
+
+        <!-- Navegación -->
         <nav aria-label="Menú principal" class="main-nav">
           <ul class="nav-list">
             <li><a href="/index.html">Inicio</a></li>
             <li><a href="#productos">Productos</a></li>
             <li><a href="/resenas.html">Reseñas</a></li>
             <li><a href="/index.html#contacto">Contacto</a></li>
+
+            <!-- === BOTÓN PARA CAMBIAR TEMA === -->
+            <li>
+              <button id="themeSwitcher" class="btn-theme">Cambiar Tema</button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -63,28 +82,28 @@
             <a class="btn" href="#">Ver</a>
           </article>
 
-           <article class="card">
+          <article class="card">
             <img src="assets/img/toy1.jpg" alt="Producto 3" />
             <h3>Producto 4</h3>
             <p>Descripción corta.</p>
             <a class="btn" href="#">Ver</a>
           </article>
 
-           <article class="card">
+          <article class="card">
             <img src="assets/img/toy2.webp" alt="Producto 3" />
             <h3>Producto 4</h3>
             <p>Descripción corta.</p>
             <a class="btn" href="#">Ver</a>
           </article>
 
-           <article class="card">
+          <article class="card">
             <img src="assets/img/toy3.jpg" alt="Producto 3" />
             <h3>Producto 5</h3>
             <p>Descripción corta.</p>
             <a class="btn" href="#">Ver</a>
           </article>
 
-           <article class="card">
+          <article class="card">
             <img src="assets/img/toy4.webp" alt="Producto 3" />
             <h3>Producto 6</h3>
             <p>Descripción corta.</p>
@@ -92,7 +111,6 @@
           </article>
         </div>
       </section>
-
     </main>
 
     <footer class="footer">
@@ -100,5 +118,7 @@
         <p>&copy; Vintage 80's. Todos los derechos reservados.</p>
       </div>
     </footer>
+        <!-- === SCRIPT DEL CAMBIADOR DE TEMAS === -->
+    <script src="assets/js/theme-switcher.js"></script>
   </body>
 </html>

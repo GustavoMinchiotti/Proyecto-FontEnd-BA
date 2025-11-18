@@ -5,23 +5,41 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Proyecto Vintage</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Montserrat:wght@600;700&family=Audiowide&family=Orbitron:wght@400;700;900&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/retro-themes.css" />
   </head>
-  <body>
+
+  <!-- IMPORTANTE: agrego class="theme-arcade" como tema inicial -->
+  <body class="theme-arcade">
     <header id="inicio" class="header">
       <div class="container header-inner">
+        <!-- Logotipo -->
+        <div class="logotipo">
+          <img src="assets/img/logotipo.png" alt="V80's" />
+        </div>
+
+        <!-- Título -->
         <h1 class="site-title">Vintage 80's</h1>
+
+        <!-- Navegación -->
         <nav aria-label="Menú principal" class="main-nav">
           <ul class="nav-list">
             <li><a href="#inicio">Inicio</a></li>
             <li><a href="/productos.html">Productos</a></li>
             <li><a href="/resenas.html">Reseñas</a></li>
             <li><a href="#contacto">Contacto</a></li>
+
+            <!-- === BOTÓN PARA CAMBIAR TEMA === -->
+            <li>
+              <button id="themeSwitcher" class="btn-theme">Cambiar Tema</button>
+            </li>
           </ul>
         </nav>
       </div>
@@ -38,7 +56,7 @@
         </div>
       </section>
 
-      <!-- Productos: Flexbox -->
+      <!--! Productos: Flexbox -->
       <section id="productos" class="productos container">
         <h2 id="productos-title">Productos</h2>
         <div class="products-grid">
@@ -88,7 +106,7 @@
         </div>
       </section>
 
-      <!-- Contacto: Formspree -->
+      <!-- Contacto -->
       <section id="contacto" class="contact container">
         <h2 id="contacto-title">Contacto</h2>
 
@@ -107,7 +125,6 @@
           <label for="message">Mensaje</label>
           <textarea id="message" name="message" rows="6" required></textarea>
 
-          <!-- Opcional: asunto -->
           <input
             type="hidden"
             name="_subject"
@@ -124,5 +141,8 @@
         <p>&copy; Vintage 80's. Todos los derechos reservados.</p>
       </div>
     </footer>
+
+    <!-- === SCRIPT DEL CAMBIADOR DE TEMAS === -->
+    <script src="assets/js/theme-switcher.js"></script>
   </body>
 </html>
