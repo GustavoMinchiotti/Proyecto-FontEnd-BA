@@ -57,6 +57,13 @@ body {
   background-position: center;
 }
 
+.theme-arcade-neon .footer {
+  --footer-bg: #0a0033;
+  --footer-text: #1affff;
+  --footer-border: #ff12c6;
+}
+
+
 /* =============================== */
 /*? THEME 2 — VAPORWAVE             */
 /* =============================== */
@@ -86,6 +93,13 @@ body {
   background-position: center;
 }
 
+.theme-vaporwave .footer {
+  --footer-bg: #351a60;
+  --footer-text: #ff71ce;
+  --footer-border: #01cdfe;
+}
+
+
 
 /* =============================== */
 /*? THEME 3 — TECH NOIR (1989)      */
@@ -114,6 +128,13 @@ body {
   background-size: cover;
   background-position: center;
 }
+
+.theme-tech-noir .footer {
+  --footer-bg: #000;
+  --footer-text: #ff0033;
+  --footer-border: #00eaff;
+}
+
 
 
 /*!!  === CONTENEDOR GENERAL === */
@@ -205,7 +226,7 @@ header {
 }
 
 
-/* TITULOS HERO */
+/* TÍTULOS HERO */
 .hero h2 {
   font-family: "Montserrat", sans-serif;
   font-size: 2.5rem;
@@ -272,6 +293,7 @@ header {
   color: var(--button-text);
   text-decoration: none;
   padding: 0.5rem 1.2rem;
+  margin: 0.5rem;
   border-radius: 6px;
   border: var(--button-border, none);
   box-shadow: var(--button-shadow, none);
@@ -282,6 +304,15 @@ header {
 .btn:hover {
   opacity: 0.85;
 }
+
+a.btn,
+button.btn {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 1; /* 🔥 Igual altura de línea */
+}
+
 
 /* === RESEÑAS === */
 .resenas {
@@ -341,20 +372,21 @@ header {
 
 /* === FOOTER === */
 .footer {
-  background: #1C1C29;
-  color: #F5F5F5;
+  background: var(--footer-bg, #111);
+  color: var(--footer-text, #ddd);
   text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
+  padding: 1.5rem 1rem;
   font-size: 0.9rem;
+  border-top: 1px solid var(--footer-border, rgba(255, 255, 255, 0.1));
 }
+
 
 /*! Mejora de contraste SOLO para tema Arcade Neon */
 .theme-arcade-neon .review {
   background: rgba(5, 0, 25, 0.85);
   /* Fondo oscuro con brillo */
   color: #1affff;
-  /* Texto cian claro */
+  /* Texto cían claro */
   border: 1px solid #ff12c6;
   /* Borde rosa neón opcional */
 }

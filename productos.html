@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Productos — Proyecto Vintage</title>
 
-
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
@@ -16,7 +15,7 @@
     <link rel="stylesheet" href="assets/css/styles.css" />
     <link rel="stylesheet" href="assets/css/retro-themes.css" />
   </head>
- 
+
   <!-- IMPORTANTE: agrego class="theme-arcade" como tema inicial -->
   <body class="theme-arcade">
     <header id="inicio" class="header">
@@ -61,54 +60,7 @@
       <section id="productos" class="productos container">
         <h2 id="productos-title">Productos</h2>
         <div class="products-grid">
-          <article class="card">
-            <img src="assets/img/producto1.jpg" alt="Producto 1" />
-            <h3>Producto 1</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/producto2.jpg" alt="Producto 2" />
-            <h3>Producto 2</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/producto3.jpg" alt="Producto 3" />
-            <h3>Producto 3</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/toy1.jpg" alt="Producto 3" />
-            <h3>Producto 4</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/toy2.webp" alt="Producto 3" />
-            <h3>Producto 4</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/toy3.jpg" alt="Producto 3" />
-            <h3>Producto 5</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
-
-          <article class="card">
-            <img src="assets/img/toy4.webp" alt="Producto 3" />
-            <h3>Producto 6</h3>
-            <p>Descripción corta.</p>
-            <a class="btn" href="#">Ver</a>
-          </article>
+          <!--? ******************* carga dinámica **************************** -->
         </div>
       </section>
     </main>
@@ -118,7 +70,9 @@
         <p>&copy; Vintage 80's. Todos los derechos reservados.</p>
       </div>
     </footer>
-        <!-- === SCRIPT DEL CAMBIADOR DE TEMAS === -->
+    <!-- === SCRIPT DEL CAMBIADOR DE TEMAS === -->
     <script src="assets/js/theme-switcher.js"></script>
+    <script src="assets/js/productos-data.js"></script>
+    <script src="assets/js/productos-ui.js"></script>
   </body>
 </html>
