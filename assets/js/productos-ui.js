@@ -66,18 +66,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        // Link o botón extra (preservamos tu clase .btn para estilos)
-        const aVer = document.createElement('a');
-        aVer.className = 'btn';
-        aVer.href = '#';
-        aVer.textContent = 'Ver';
 
         // Armar la tarjeta
         card.appendChild(img);
         card.appendChild(h3);
         card.appendChild(p);
         card.appendChild(btnVer);
-        card.appendChild(aVer);
+
 
         fragment.appendChild(card);
     });

@@ -151,36 +151,73 @@ header {
   position: sticky;
   top: 0;
   z-index: 10;
+  display: block;
+  width: 100%;
+}
+
+/* Logo: tamaño y margen */
+.logotipo {
+  flex: 0 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 .logotipo img {
-  width: 50px;
-  /* tamaño perfecto para header */
-  height: auto;
-  display: block;
+  width: 56px;
+  /* ajustá si querés más pequeño/grande */
+  height: 56px;
+  object-fit: cover;
   border-radius: 50%;
-  margin: 0%;
-  padding: 0%;
+  display: block;
 }
 
 .header-inner {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  /* centra verticalmente todos los hijos */
+  gap: 1rem;
+  height: 72px;
+  /* altura consistente del header */
 }
 
+/* Título centrado: toma todo el espacio libre */
 .site-title {
-  font-family: "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 1.8rem;
+  flex: 1 1 auto;
+  /* ocupa el espacio entre logo y nav */
+  text-align: center;
+  margin: 0;
+  font-size: 1.9rem;
+  /* ajustable */
+  line-height: 1;
+  letter-spacing: 0.6px;
   color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 0.5rem;
+  /* previene choque visual con logo */
 }
 
 /* NAV */
-.nav-list {
-  list-style: none;
+.main-nav {
+  flex: 0 0 auto;
   display: flex;
-  gap: 1.5rem;
+  align-items: center;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegurar que cada item quede alineado */
+.nav-list li {
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-list a {
@@ -193,6 +230,129 @@ header {
 .nav-list a:hover {
   color: var(--color-secondary);
 }
+
+.btn-theme,
+.cart-button {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  height: 36px;
+  /* misma altura para ambos */
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Separador visual y margen para el cart */
+.cart-indicator {
+  margin-left: 6px;
+}
+
+/*! /////////////////// carrito /////////////////////////////////*/
+/* === CARRITO — Unificado con botones del tema === */
+.cart-indicator {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+}
+
+.cart-button {
+  background: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  /* misma altura que .btn-theme */
+  border-radius: 6px;
+  border: var(--button-border, none);
+  box-shadow: var(--button-shadow, none);
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.cart-button:hover {
+  opacity: 0.85;
+}
+
+#cart-count {
+  font-weight: 700;
+}
+
+/* Estilo del contador pequeño dentro del botón (badge) */
+#cart-count {
+  display: inline-block;
+  min-width: 20px;
+  padding: 2px 6px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.12);
+  color: inherit;
+  font-weight: 700;
+  margin-left: 6px;
+  text-align: center;
+}
+
+/*! ----------------------------- DRAWER CARRITO ----------------------------------*/
+
+/* ----- Items del carrito ----- */
+/* ----- Items del carrito ----- */
+.cart-item {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid rgba(255,255,255,0.15);
+  display: grid;
+  grid-template-columns: 64px 1fr auto; /* IMG | INFO | ELIMINAR */
+  gap: 0.8rem;
+  align-items: center; /* <-- centra todo verticalmente */
+}
+
+.cart-item img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.cart-item-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+  line-height: 1.2;
+}
+
+.cart-item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+.cart-item input[type="number"] {
+  width: 50px;
+  padding: 4px;
+  font-size: 0.9rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Botón eliminar más compacto */
+.btn-remove {
+  font-size: 0.75rem !important;
+  padding: 4px 10px !important;
+  white-space: nowrap;
+  height: auto !important;
+  align-self: center; /* <-- evita que crezca verticalmente */
+}
+
+
+
+
 
 /* === HERO === */
 .hero {
@@ -250,6 +410,54 @@ header {
   gap: 1.5rem;
   margin-top: 2rem;
 }
+
+/* === SOLO EN INDEX: vista preliminar de productos === */
+.products-preview {
+  display: grid;
+  /* usar grid para controlar columnas/filas */
+  grid-auto-flow: column;
+  /* forzar que las cards fluyan en 1 sola fila */
+  gap: 1.5rem;
+  padding-bottom: 1rem;
+  overflow-x: auto;
+  /* scrolleo horizontal si no entran */
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Anchura fija de las cards dentro de la preview (evita estirado) */
+.products-preview .card {
+  width: 280px;
+  /* misma que en tu card por defecto */
+  flex: 0 0 auto;
+  /* por si existiera flex heredado */
+}
+
+/* Número de productos visibles según pantalla */
+.products-preview {
+  grid-template-columns: repeat(3, 280px);
+}
+
+@media (min-width: 768px) {
+  .products-preview {
+    grid-template-columns: repeat(4, 280px);
+  }
+}
+
+@media (min-width: 1200px) {
+  .products-preview {
+    grid-template-columns: repeat(5, 280px);
+  }
+}
+
+.products-preview::-webkit-scrollbar {
+  height: 8px;
+}
+
+.products-preview::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+}
+
 
 .card {
   background: var(--card-bg);
@@ -310,7 +518,8 @@ button.btn {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   font-weight: 600;
-  line-height: 1; /* 🔥 Igual altura de línea */
+  line-height: 1;
+  /* 🔥 Igual altura de línea */
 }
 
 
@@ -443,5 +652,50 @@ button.btn {
 
   .reviews-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* Si querés que el título destaque más en pantallas grandes */
+@media (min-width: 1400px) {
+  .site-title {
+    font-size: 2.4rem;
+  }
+}
+
+/* ===== Responsive: ajustar en pantallas pequeñas ===== */
+@media (max-width: 900px) {
+  .header-inner {
+    height: auto;
+    padding: 0.5rem 0;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .site-title {
+    order: 3;
+    width: 100%;
+    font-size: 1.6rem;
+    margin-top: 6px;
+  }
+
+  .logotipo {
+    order: 1;
+  }
+
+  .main-nav {
+    order: 2;
+  }
+
+  .nav-list {
+    gap: 0.6rem;
+  }
+
+  /* Reduce chiquito los botones para móviles */
+  .btn-theme,
+  .cart-button {
+    height: 32px;
+    padding: 5px 10px;
+    font-size: 13px;
   }
 }
