@@ -103,7 +103,6 @@ function ensureCartUI() {
             height: '100vh',
             width: '360px',
             maxWidth: '95%',
-            background: 'var(--card-bg, #fff)',
             boxShadow: '-8px 0 20px rgba(0,0,0,0.2)',
             transform: 'translateX(100%)',
             transition: 'transform 300ms ease',

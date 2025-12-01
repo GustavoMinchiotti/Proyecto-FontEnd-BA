@@ -27,6 +27,34 @@ body {
   --button-text: #fff;
 }
 
+#cart-drawer {
+  background: var(--card-bg);
+}
+
+.cart-header {
+  display: flex;
+  align-items: center;
+  /* centra verticalmente */
+  justify-content: space-between;
+  /* separa título y botón */
+  margin-bottom: 1rem;
+}
+
+.cart-header h3 {
+  margin: 0;
+  /* elimina salto extra */
+  font-size: 1.3rem;
+}
+
+.cart-header .btn-close-cart {
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+
+
 /* =============================== */
 /*? THEME 1 — ARCADE NEON (1983)    */
 /* =============================== */
@@ -61,6 +89,12 @@ body {
   --footer-bg: #0a0033;
   --footer-text: #1affff;
   --footer-border: #ff12c6;
+}
+
+.theme-arcade-neon #cart-drawer {
+  background: rgba(10, 0, 51, 0.92);
+  border-left-color: rgba(255, 18, 198, 0.4);
+  /* rosa neon */
 }
 
 
@@ -99,6 +133,12 @@ body {
   --footer-border: #01cdfe;
 }
 
+.theme-vaporwave #cart-drawer {
+  background: rgba(43, 20, 78, 0.959);
+  border-left-color: rgba(1, 205, 254, 0.45);
+  /* cyan suave */
+}
+
 
 
 /* =============================== */
@@ -135,6 +175,12 @@ body {
   --footer-border: #00eaff;
 }
 
+.theme-tech-noir #cart-drawer {
+  background: rgba(5, 5, 5, 0.93);
+  border-left-color: rgba(0, 234, 255, 0.4);
+  /* borde celeste neon */
+}
+
 
 
 /*!!  === CONTENEDOR GENERAL === */
@@ -153,6 +199,11 @@ header {
   z-index: 10;
   display: block;
   width: 100%;
+}
+
+#inicio {
+  scroll-margin-top: 72px;
+  /* la misma altura del header */
 }
 
 /* Logo: tamaño y margen */
@@ -305,11 +356,13 @@ header {
 /* ----- Items del carrito ----- */
 .cart-item {
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(255,255,255,0.15);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   display: grid;
-  grid-template-columns: 64px 1fr auto; /* IMG | INFO | ELIMINAR */
+  grid-template-columns: 64px 1fr auto;
+  /* IMG | INFO | ELIMINAR */
   gap: 0.8rem;
-  align-items: center; /* <-- centra todo verticalmente */
+  align-items: center;
+  /* <-- centra todo verticalmente */
 }
 
 .cart-item img {
@@ -347,11 +400,9 @@ header {
   padding: 4px 10px !important;
   white-space: nowrap;
   height: auto !important;
-  align-self: center; /* <-- evita que crezca verticalmente */
+  align-self: center;
+  /* <-- evita que crezca verticalmente */
 }
-
-
-
 
 
 /* === HERO === */
